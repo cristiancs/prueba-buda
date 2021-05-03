@@ -1,28 +1,29 @@
 # prueba-buda
 
-## Historia
+## Introducción
 
-Este problema puede ser solucionado de varias maneras, tales como [Dijkstra's](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm), [BFS 0-1](https://cp-algorithms.com/graph/01_bfs.html) o [A*](https://en.wikipedia.org/wiki/A*_search_algorithm) para este caso, utilizaremos BFS 0-1.
+Este es un problema de grafos, el cual puede ser solucionado de varias maneras, tales como  [Dijkstra's](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm), [A*](https://en.wikipedia.org/wiki/A*_search_algorithm) o  [BFS 0-1](https://cp-algorithms.com/graph/01_bfs.html) para este caso, utilizaremos BFS 0-1 ya que tiene una eficiencia mayor y se acomoda perfecto a lo que necesitamos.
 
 
 ## Estructura de Entrada
 
 ```json
     {
-    "stations": {
-        "A": {
-            "connectedStations": [
-                "B"
-            ],
-            "color": ""
-        },
-        "B": {
-            "connectedStations": [
-                "A",
-                "C"
-            ],
-            "color": ""
-        },
+        "stations": {
+            "A": {
+                "connectedStations": [
+                    "B"
+                ],
+                "color": ""
+            },
+            "B": {
+                "connectedStations": [
+                    "A",
+                    "C"
+                ],
+                "color": ""
+            }
+        }
     }
 ```
 

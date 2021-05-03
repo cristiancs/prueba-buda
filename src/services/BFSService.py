@@ -7,6 +7,7 @@ class BFSService:
         self.color = color
 
     def getNeighbourWeight(self, neighbour):
+        ''' Assigns weights for stations based on the color of the train and the station color '''
         if self.color == '':
             return 1
         if self.color == self.data[neighbour]['color']:
@@ -16,6 +17,7 @@ class BFSService:
         return 0
     
     def cleanPath(self, path, endNode):
+        ''' Removes stations with a color different to the train color (it the train as a color) '''
         clearedPath = []
         for station in path:
             if self.getNeighbourWeight(station) == 1:
