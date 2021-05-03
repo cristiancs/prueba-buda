@@ -1,0 +1,16 @@
+{
+    "stations": {
+        "A": {
+            "connectedStations": [
+                "B"
+            ]
+        },
+        "B": {
+            "connectedStations": [
+                "A",
+                "C"
+            ],
+            "color": ""
+        }
+    }
+}

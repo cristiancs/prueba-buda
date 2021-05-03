@@ -1,0 +1,67 @@
+{
+    "stations": {
+        "A": {
+            "connectedStations": [
+                "B"
+            ],
+            "color": ""
+        },
+        "B": {
+            "connectedStations": [
+                "A",
+                "C"
+            ],
+            "color": ""
+        },
+        "C": {
+            "connectedStations": [
+                "B",
+                "C",
+                "G"
+            ],
+            "color": ""
+        },
+        "D": {
+            "connectedStations": [
+                "C",
+                "E"
+            ],
+            "color": ""
+        },
+        "E": {
+            "connectedStations": [
+                "D",
+                "F"
+            ],
+            "color": ""
+        },
+        "F": {
+            "connectedStations": [
+                "E",
+                "I"
+            ],
+            "color": ""
+        },
+        "G": {
+            "connectedStations": [
+                "C",
+                "H"
+            ],
+            "color": "green"
+        },
+        "H": {
+            "connectedStations": [
+                "G",
+                "I"
+            ],
+            "color": "red"
+        },
+        "I": {
+            "connectedStations": [
+                "H",
+                "F"
+            ],
+            "color": "green"
+        }
+    }
+}
