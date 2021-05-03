@@ -16,7 +16,7 @@
         "C": {
             "connectedStations": [
                 "B",
-                "C",
+                "D",
                 "G"
             ],
             "color": ""
@@ -61,6 +61,10 @@
                 "H",
                 "F"
             ],
+            "color": "green"
+        },
+        "Z": {
+            "connectedStations": [],
             "color": "green"
         }
     }

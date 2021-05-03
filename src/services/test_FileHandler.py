@@ -1,7 +1,7 @@
 import pytest
-from FileHandler import parse_input
+from FileHandlerService import parse_input
 import uuid
-class TestClass:
+class TestFileHandler:
     def test_empty_file(self):
         """ Non existing files should raise error """
         
