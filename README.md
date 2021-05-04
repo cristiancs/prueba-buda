@@ -54,7 +54,7 @@ En caso de no encontrar rutas:
 
 ### Ejecución
 
-    python src/main.py .test_inputs/example_input.json A F red              
+    python src/main.py test_inputs/example_input.json A F red              
 
 ## Pruebas Unitarias
 Estas pruebas deben ejecutarse desde el directorio root
