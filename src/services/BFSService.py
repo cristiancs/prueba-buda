@@ -68,4 +68,4 @@ class BFSService:
                         
         if(len(viablePaths) == 0):                
             return []
-        return  self.cleanPath(sorted(viablePaths)[0],  endNode)
+        return  self.cleanPath(sorted(viablePaths, key=len)[0],  endNode)
