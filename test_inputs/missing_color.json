@@ -1,15 +1,15 @@
 {
     "stations": {
         "A": {
-            "connectedStations": [
-                "B"
-            ]
+            "connectedStations": {
+                "B": 5
+            }
         },
         "B": {
-            "connectedStations": [
-                "A",
-                "C"
-            ],
+            "connectedStations": {
+                "A": 5,
+                "C": 5
+            },
             "color": ""
         }
     }

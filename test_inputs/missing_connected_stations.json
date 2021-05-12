@@ -1,9 +1,9 @@
 {
     "stations": {
         "A": {
-            "connectedStations": [
-                "B"
-            ],
+            "connectedStations": {
+                "B": 5
+            },
             "color": ""
         },
         "B": {

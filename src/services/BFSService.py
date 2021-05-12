@@ -6,21 +6,21 @@ class BFSService:
         self.data = data
         self.color = color
 
-    def getNeighbourWeight(self, neighbour):
+    def getNeighbourWeight(self, neighbour, weight, stopTime):
         ''' Assigns weights for stations based on the color of the train and the station color '''
         if self.color == '':
-            return 1
+            return weight + stopTime
         if self.color == self.data[neighbour]['color']:
-            return 1
+            return weight + stopTime
         if self.data[neighbour]['color'] == '':
-            return 1
-        return 0
+            return weight + stopTime
+        return weight
     
     def cleanPath(self, path, endNode):
         ''' Removes stations with a color different to the train color (it the train as a color) '''
         clearedPath = []
         for station in path:
-            if self.getNeighbourWeight(station) == 1:
+            if self.getNeighbourWeight(station, 1, 1) == 2:
                 clearedPath.append(station)
         if clearedPath[-1] != endNode:
             return []
@@ -37,8 +37,6 @@ class BFSService:
             weight[node] = math.inf
         weight[startNode] = 0
         
-        visited = set()
-
         viablePaths = []
         queue.append([startNode])
 
@@ -49,11 +47,11 @@ class BFSService:
             stationData = self.data[name]
 
             if name == endNode:
-                viablePaths.append(path)
+                viablePaths.append([weight[name], path])
 
-            for neighbour in stationData['connectedStations']:
-                
-                weightNeighbour = self.getNeighbourWeight(neighbour)
+            for neighbour, currentWeight in stationData['connectedStations'].items():
+                weightNeighbour = self.getNeighbourWeight(neighbour, currentWeight, self.data[neighbour]['stopTime'])
+       
                 optionWeight = weight[name] + weightNeighbour
                 if weight[neighbour] >= optionWeight:
                     weight[neighbour] = optionWeight
@@ -64,8 +62,9 @@ class BFSService:
                         queue.appendleft(new_path)
                     else:
                         queue.append(new_path)
-
-                        
+        viablePaths = sorted(viablePaths)
+        print(viablePaths)
+        print(self.cleanPath(viablePaths[0][1],  endNode))
         if(len(viablePaths) == 0):                
             return []
-        return  self.cleanPath(sorted(viablePaths, key=len)[0],  endNode)
+        return  self.cleanPath(viablePaths[0][1],  endNode)

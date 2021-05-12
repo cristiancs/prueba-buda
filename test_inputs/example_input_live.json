@@ -4,7 +4,6 @@
             "connectedStations": {
                 "B": 5
             },
-            "stopTime": 5,
             "color": ""
         },
         "B": {
@@ -12,7 +11,6 @@
                 "A": 5,
                 "C": 5
             },
-            "stopTime": 5,
             "color": ""
         },
         "C": {
@@ -21,15 +19,13 @@
                 "D": 5,
                 "G": 5
             },
-            "stopTime": 5,
             "color": ""
         },
         "D": {
             "connectedStations": {
                 "C": 5,
-                "E": 50000
+                "E": 5
             },
-            "stopTime": 5,
             "color": ""
         },
         "E": {
@@ -37,7 +33,6 @@
                 "D": 5,
                 "F": 5
             },
-            "stopTime": 5,
             "color": ""
         },
         "F": {
@@ -45,15 +40,13 @@
                 "E": 5,
                 "I": 5
             },
-            "stopTime": 5,
             "color": ""
         },
         "G": {
             "connectedStations": {
                 "C": 5,
-                "H": 500
+                "H": 5
             },
-            "stopTime": 5,
             "color": "green"
         },
         "H": {
@@ -61,7 +54,6 @@
                 "G": 5,
                 "I": 5
             },
-            "stopTime": 5,
             "color": "red"
         },
         "I": {
@@ -69,12 +61,10 @@
                 "H": 5,
                 "F": 5
             },
-            "stopTime": 5,
             "color": "green"
         },
         "Z": {
             "connectedStations": {},
-            "stopTime": 5,
             "color": "green"
         }
     }
